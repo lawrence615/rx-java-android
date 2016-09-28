@@ -19,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        /**
+         * We are using the map operator.
+         *
+         * For the list of numbers we have (1-5), we multiply every odd number by 2 otherwise return
+         * the number as it is.
+         *
+         * The expected result: 2,2,6,4,10
+         */
         Observable<Integer> observable = Observable
                 .just(1, 2, 3, 4, 5)
                 .map(new Func1<Integer, Integer>() {
