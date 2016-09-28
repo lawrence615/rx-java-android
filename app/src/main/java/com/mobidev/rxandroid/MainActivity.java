@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
          * For the list of numbers we have (1-5), we multiply every odd number by 2 otherwise return
          * the number as it is.
          *
-         * The expected result: 2,2,6,4,10
+         * The expected result: 6,10
          */
         Observable<Integer> observable = Observable
                 .just(1, 2, 3, 4, 5)
