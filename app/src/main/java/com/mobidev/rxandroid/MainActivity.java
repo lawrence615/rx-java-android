@@ -34,12 +34,6 @@ public class MainActivity extends AppCompatActivity {
                     public Integer call(Integer integer) {
                         return (integer % 2 != 0) ? integer * 2 : integer;
                     }
-                })
-                .filter(new Func1<Integer, Boolean>() {
-                    @Override
-                    public Boolean call(Integer integer) {
-                        return integer >= 5;
-                    }
                 });
 
         subscription = observable.subscribe(new Observer<Integer>() {
