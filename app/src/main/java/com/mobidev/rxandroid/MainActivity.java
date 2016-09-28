@@ -28,7 +28,13 @@ public class MainActivity extends AppCompatActivity {
          * The expected result: 6,10
          */
         Observable<Integer> observable = Observable
-                .just(1, 2, 3, 4, 5);
+                .just(1, 2, 3, 4, 5)
+                .map(new Func1<Integer, Integer>() {
+                    @Override
+                    public Integer call(Integer integer) {
+                        return (integer % 2 != 0) ? integer * 2 : integer;
+                    }
+                });
 
         subscription = observable.subscribe(new Observer<Integer>() {
             @Override
